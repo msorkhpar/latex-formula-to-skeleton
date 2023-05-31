@@ -1,10 +1,15 @@
 ## LaTeX Formula Skeleton Generator
 
-This repository provides a solution for generating the skeleton of LaTeX formulas using the `latex`, `dvisvgm`, `cairosvg`, and `skimage` libraries. The process involves converting LaTeX formulas to DVI, SVG, and PNG formats, followed by skeleton extraction using the Lee algorithm.
+This repository provides a solution for generating the skeleton of LaTeX formulas using
+the `latex`, `dvisvgm`, `cairosvg`, and `skimage` libraries. The process involves converting LaTeX formulas to DVI, SVG,
+and PNG formats, followed by skeleton extraction using the Lee algorithm.
+
+The `latex_symbols.csv` has been generated from https://artofproblemsolving.com/wiki/index.php/LaTeX:Symbols
 
 ## Requirements
 
 To use this code, ensure you have the following dependencies installed:
+
 - `latex` command-line tool
 - `dvisvgm` command-line tool for converting DVI to SVG
 - `cairosvg` for converting SVG to PNG
@@ -13,11 +18,357 @@ To use this code, ensure you have the following dependencies installed:
 
 ### Usage
 
-1. Set up the output directory by modifying the `output_dir` variable in the `.env` file.
-2. Create a CSV file named `latex_symbols.csv` with columns: `Name` and `Symbol` for each LaTeX symbol(formula) to be processed.
-3. Run the code.
-4. Generated files will be available under the paths provided in the `.env` file.
+1. Set up the output directory by modifying the `output_dir` variable in the `.env` file
+2. Create a CSV file named `latex_symbols.csv` with columns: `Name` and `Symbol` for each LaTeX symbol(formula) to be
+   processed
+3. copy the `.env-sample` as `.env` and modify the variables if needed
+4. Run `main.py`
+5. Generated files will be available under the paths provided in the `.env` file
 
 Please ensure that you have the necessary dependencies installed and configured properly before running the code.
 
 Feel free to customize the code and adapt it to your specific requirements.
+
+### List of the generated SVG files
+
+| Index |        Name        |    LaTeX symbol     |                                  Image                                  |
+|:-----:|:------------------:|:-------------------:|:-----------------------------------------------------------------------:|
+|   1   |         A          |          A          |         <img src='./output/svg/A.svg' height='32'  width='32'>          |
+|   2   |         B          |          B          |         <img src='./output/svg/B.svg' height='32'  width='32'>          |
+|   3   |         C          |          C          |         <img src='./output/svg/C.svg' height='32'  width='32'>          |
+|   4   |         D          |          D          |         <img src='./output/svg/D.svg' height='32'  width='32'>          |
+|   5   |         E          |          E          |         <img src='./output/svg/E.svg' height='32'  width='32'>          |
+|   6   |         F          |          F          |         <img src='./output/svg/F.svg' height='32'  width='32'>          |
+|   7   |         G          |          G          |         <img src='./output/svg/G.svg' height='32'  width='32'>          |
+|   8   |         H          |          H          |         <img src='./output/svg/H.svg' height='32'  width='32'>          |
+|   9   |         I          |          I          |         <img src='./output/svg/I.svg' height='32'  width='32'>          |
+|  10   |         J          |          J          |         <img src='./output/svg/J.svg' height='32'  width='32'>          |
+|  11   |         K          |          K          |         <img src='./output/svg/K.svg' height='32'  width='32'>          |
+|  12   |         L          |          L          |         <img src='./output/svg/L.svg' height='32'  width='32'>          |
+|  13   |         M          |          M          |         <img src='./output/svg/M.svg' height='32'  width='32'>          |
+|  14   |         N          |          N          |         <img src='./output/svg/N.svg' height='32'  width='32'>          |
+|  15   |         O          |          O          |         <img src='./output/svg/O.svg' height='32'  width='32'>          |
+|  16   |         P          |          P          |         <img src='./output/svg/P.svg' height='32'  width='32'>          |
+|  17   |         Q          |          Q          |         <img src='./output/svg/Q.svg' height='32'  width='32'>          |
+|  18   |         R          |          R          |         <img src='./output/svg/R.svg' height='32'  width='32'>          |
+|  19   |         S          |          S          |         <img src='./output/svg/S.svg' height='32'  width='32'>          |
+|  20   |         T          |          T          |         <img src='./output/svg/T.svg' height='32'  width='32'>          |
+|  21   |         U          |          U          |         <img src='./output/svg/U.svg' height='32'  width='32'>          |
+|  22   |         V          |          V          |         <img src='./output/svg/V.svg' height='32'  width='32'>          |
+|  23   |         W          |          W          |         <img src='./output/svg/W.svg' height='32'  width='32'>          |
+|  24   |         X          |          X          |         <img src='./output/svg/X.svg' height='32'  width='32'>          |
+|  25   |         Y          |          Y          |         <img src='./output/svg/Y.svg' height='32'  width='32'>          |
+|  26   |         Z          |          Z          |         <img src='./output/svg/Z.svg' height='32'  width='32'>          |
+|  27   |         a          |          a          |         <img src='./output/svg/a.svg' height='32'  width='32'>          |
+|  28   |         b          |          b          |         <img src='./output/svg/b.svg' height='32'  width='32'>          |
+|  29   |         c          |          c          |         <img src='./output/svg/c.svg' height='32'  width='32'>          |
+|  30   |         d          |          d          |         <img src='./output/svg/d.svg' height='32'  width='32'>          |
+|  31   |         e          |          e          |         <img src='./output/svg/e.svg' height='32'  width='32'>          |
+|  32   |         f          |          f          |         <img src='./output/svg/f.svg' height='32'  width='32'>          |
+|  33   |         g          |          g          |         <img src='./output/svg/g.svg' height='32'  width='32'>          |
+|  34   |         h          |          h          |         <img src='./output/svg/h.svg' height='32'  width='32'>          |
+|  35   |         i          |          i          |         <img src='./output/svg/i.svg' height='32'  width='32'>          |
+|  36   |         j          |          j          |         <img src='./output/svg/j.svg' height='32'  width='32'>          |
+|  37   |         k          |          k          |         <img src='./output/svg/k.svg' height='32'  width='32'>          |
+|  38   |         l          |          l          |         <img src='./output/svg/l.svg' height='32'  width='32'>          |
+|  39   |         m          |          m          |         <img src='./output/svg/m.svg' height='32'  width='32'>          |
+|  40   |         n          |          n          |         <img src='./output/svg/n.svg' height='32'  width='32'>          |
+|  41   |         o          |          o          |         <img src='./output/svg/o.svg' height='32'  width='32'>          |
+|  42   |         p          |          p          |         <img src='./output/svg/p.svg' height='32'  width='32'>          |
+|  43   |         q          |          q          |         <img src='./output/svg/q.svg' height='32'  width='32'>          |
+|  44   |         r          |          r          |         <img src='./output/svg/r.svg' height='32'  width='32'>          |
+|  45   |         s          |          s          |         <img src='./output/svg/s.svg' height='32'  width='32'>          |
+|  46   |         t          |          t          |         <img src='./output/svg/t.svg' height='32'  width='32'>          |
+|  47   |         u          |          u          |         <img src='./output/svg/u.svg' height='32'  width='32'>          |
+|  48   |         v          |          v          |         <img src='./output/svg/v.svg' height='32'  width='32'>          |
+|  49   |         w          |          w          |         <img src='./output/svg/w.svg' height='32'  width='32'>          |
+|  50   |         x          |          x          |         <img src='./output/svg/x.svg' height='32'  width='32'>          |
+|  51   |         y          |          y          |         <img src='./output/svg/y.svg' height='32'  width='32'>          |
+|  52   |         z          |          z          |         <img src='./output/svg/z.svg' height='32'  width='32'>          |
+|  53   |         0          |          0          |         <img src='./output/svg/0.svg' height='32'  width='32'>          |
+|  54   |         1          |          1          |         <img src='./output/svg/1.svg' height='32'  width='32'>          |
+|  55   |         2          |          2          |         <img src='./output/svg/2.svg' height='32'  width='32'>          |
+|  56   |         3          |          3          |         <img src='./output/svg/3.svg' height='32'  width='32'>          |
+|  57   |         4          |          4          |         <img src='./output/svg/4.svg' height='32'  width='32'>          |
+|  58   |         5          |          5          |         <img src='./output/svg/5.svg' height='32'  width='32'>          |
+|  59   |         6          |          6          |         <img src='./output/svg/6.svg' height='32'  width='32'>          |
+|  60   |         7          |          7          |         <img src='./output/svg/7.svg' height='32'  width='32'>          |
+|  61   |         8          |          8          |         <img src='./output/svg/8.svg' height='32'  width='32'>          |
+|  62   |         9          |          9          |         <img src='./output/svg/9.svg' height='32'  width='32'>          |
+|  63   |         !`         |         !`          |         <img src='./output/svg/!`.svg' height='32'  width='32'>         |
+|  64   |         &          |         \&          |         <img src='./output/svg/&.svg' height='32'  width='32'>          |
+|  65   |        Box         |        \Box         |        <img src='./output/svg/Box.svg' height='32'  width='32'>         |
+|  66   |       Delta        |       \Delta        |       <img src='./output/svg/Delta.svg' height='32'  width='32'>        |
+|  67   |      Diamond       |      \Diamond       |      <img src='./output/svg/Diamond.svg' height='32'  width='32'>       |
+|  68   |     Downarrow      |     \Downarrow      |     <img src='./output/svg/Downarrow.svg' height='32'  width='32'>      |
+|  69   |       Gamma        |       \Gamma        |       <img src='./output/svg/Gamma.svg' height='32'  width='32'>        |
+|  70   |         Im         |         \Im         |         <img src='./output/svg/Im.svg' height='32'  width='32'>         |
+|  71   |        Join        |        \Join        |        <img src='./output/svg/Join.svg' height='32'  width='32'>        |
+|  72   |       Lambda       |       \Lambda       |       <img src='./output/svg/Lambda.svg' height='32'  width='32'>       |
+|  73   |     Leftarrow      |     \Leftarrow      |     <img src='./output/svg/Leftarrow.svg' height='32'  width='32'>      |
+|  74   |   Leftrightarrow   |   \Leftrightarrow   |   <img src='./output/svg/Leftrightarrow.svg' height='32'  width='32'>   |
+|  75   |   Longleftarrow    |   \Longleftarrow    |   <img src='./output/svg/Longleftarrow.svg' height='32'  width='32'>    |
+|  76   | Longleftrightarrow | \Longleftrightarrow | <img src='./output/svg/Longleftrightarrow.svg' height='32'  width='32'> |
+|  77   |   Longrightarrow   |   \Longrightarrow   |   <img src='./output/svg/Longrightarrow.svg' height='32'  width='32'>   |
+|  78   |       Omega        |       \Omega        |       <img src='./output/svg/Omega.svg' height='32'  width='32'>        |
+|  79   |         P          |         \P          |         <img src='./output/svg/P.svg' height='32'  width='32'>          |
+|  80   |        Phi         |        \Phi         |        <img src='./output/svg/Phi.svg' height='32'  width='32'>         |
+|  81   |         Pi         |         \Pi         |         <img src='./output/svg/Pi.svg' height='32'  width='32'>         |
+|  82   |        Psi         |        \Psi         |        <img src='./output/svg/Psi.svg' height='32'  width='32'>         |
+|  83   |         Re         |         \Re         |         <img src='./output/svg/Re.svg' height='32'  width='32'>         |
+|  84   |     Rightarrow     |     \Rightarrow     |     <img src='./output/svg/Rightarrow.svg' height='32'  width='32'>     |
+|  85   |         _S         |         \S          |         <img src='./output/svg/_S.svg' height='32'  width='32'>         |
+|  86   |       Sigma        |       \Sigma        |       <img src='./output/svg/Sigma.svg' height='32'  width='32'>        |
+|  87   |       Theta        |       \Theta        |       <img src='./output/svg/Theta.svg' height='32'  width='32'>        |
+|  88   |      Uparrow       |      \Uparrow       |      <img src='./output/svg/Uparrow.svg' height='32'  width='32'>       |
+|  89   |    Updownarrow     |    \Updownarrow     |    <img src='./output/svg/Updownarrow.svg' height='32'  width='32'>     |
+|  90   |      Upsilon       |      \Upsilon       |      <img src='./output/svg/Upsilon.svg' height='32'  width='32'>       |
+|  91   |       Vdash        |       \Vdash        |       <img src='./output/svg/Vdash.svg' height='32'  width='32'>        |
+|  92   |         Xi         |         \Xi         |         <img src='./output/svg/Xi.svg' height='32'  width='32'>         |
+|  93   |         _          |         \_          |         <img src='./output/svg/_.svg' height='32'  width='32'>          |
+|  94   |      _persent      |         \%          |      <img src='./output/svg/_persent.svg' height='32'  width='32'>      |
+|  95   |       _pipe        |         \|          |       <img src='./output/svg/_pipe.svg' height='32'  width='32'>        |
+|  96   |       _sharp       |         \#          |       <img src='./output/svg/_sharp.svg' height='32'  width='32'>       |
+|  97   |       acute        |      \acute{}       |       <img src='./output/svg/acute.svg' height='32'  width='32'>        |
+|  98   |       aleph        |       \aleph        |       <img src='./output/svg/aleph.svg' height='32'  width='32'>        |
+|  99   |       alpha        |       \alpha        |       <img src='./output/svg/alpha.svg' height='32'  width='32'>        |
+|  100  |       amalg        |       \amalg        |       <img src='./output/svg/amalg.svg' height='32'  width='32'>        |
+|  101  |       angle        |       \angle        |       <img src='./output/svg/angle.svg' height='32'  width='32'>        |
+|  102  |       approx       |       \approx       |       <img src='./output/svg/approx.svg' height='32'  width='32'>       |
+|  103  |        ast         |        \ast         |        <img src='./output/svg/ast.svg' height='32'  width='32'>         |
+|  104  |       asymp        |       \asymp        |       <img src='./output/svg/asymp.svg' height='32'  width='32'>        |
+|  105  |     backslash      |     \backslash      |     <img src='./output/svg/backslash.svg' height='32'  width='32'>      |
+|  106  |        bar         |       \bar{}        |        <img src='./output/svg/bar.svg' height='32'  width='32'>         |
+|  107  |        beta        |        \beta        |        <img src='./output/svg/beta.svg' height='32'  width='32'>        |
+|  108  |       bigcap       |       \bigcap       |       <img src='./output/svg/bigcap.svg' height='32'  width='32'>       |
+|  109  |      bigcirc       |      \bigcirc       |      <img src='./output/svg/bigcirc.svg' height='32'  width='32'>       |
+|  110  |       bigcup       |       \bigcup       |       <img src='./output/svg/bigcup.svg' height='32'  width='32'>       |
+|  111  |      bigodot       |      \bigodot       |      <img src='./output/svg/bigodot.svg' height='32'  width='32'>       |
+|  112  |      bigoplus      |      \bigoplus      |      <img src='./output/svg/bigoplus.svg' height='32'  width='32'>      |
+|  113  |     bigotimes      |     \bigotimes      |     <img src='./output/svg/bigotimes.svg' height='32'  width='32'>      |
+|  114  |      bigsqcup      |      \bigsqcup      |      <img src='./output/svg/bigsqcup.svg' height='32'  width='32'>      |
+|  115  |      bigstar       |      \bigstar       |      <img src='./output/svg/bigstar.svg' height='32'  width='32'>       |
+|  116  |  bigtriangledown   |  \bigtriangledown   |  <img src='./output/svg/bigtriangledown.svg' height='32'  width='32'>   |
+|  117  |   bigtriangleup    |   \bigtriangleup    |   <img src='./output/svg/bigtriangleup.svg' height='32'  width='32'>    |
+|  118  |      biguplus      |      \biguplus      |      <img src='./output/svg/biguplus.svg' height='32'  width='32'>      |
+|  119  |       bigvee       |       \bigvee       |       <img src='./output/svg/bigvee.svg' height='32'  width='32'>       |
+|  120  |      bigwedge      |      \bigwedge      |      <img src='./output/svg/bigwedge.svg' height='32'  width='32'>      |
+|  121  |    blacksquare     |    \blacksquare     |    <img src='./output/svg/blacksquare.svg' height='32'  width='32'>     |
+|  122  |        bot         |        \bot         |        <img src='./output/svg/bot.svg' height='32'  width='32'>         |
+|  123  |       bowtie       |       \bowtie       |       <img src='./output/svg/bowtie.svg' height='32'  width='32'>       |
+|  124  |       breve        |      \breve{}       |       <img src='./output/svg/breve.svg' height='32'  width='32'>        |
+|  125  |       bullet       |       \bullet       |       <img src='./output/svg/bullet.svg' height='32'  width='32'>       |
+|  126  |       bumpeq       |       \bumpeq       |       <img src='./output/svg/bumpeq.svg' height='32'  width='32'>       |
+|  127  |       cancer       |       \cancer       |       <img src='./output/svg/cancer.svg' height='32'  width='32'>       |
+|  128  |        cap         |        \cap         |        <img src='./output/svg/cap.svg' height='32'  width='32'>         |
+|  129  |        cdot        |        \cdot        |        <img src='./output/svg/cdot.svg' height='32'  width='32'>        |
+|  130  |       cdots        |       \cdots        |       <img src='./output/svg/cdots.svg' height='32'  width='32'>        |
+|  131  |       check        |      \check{}       |       <img src='./output/svg/check.svg' height='32'  width='32'>        |
+|  132  |     checkmark      |     \checkmark      |     <img src='./output/svg/checkmark.svg' height='32'  width='32'>      |
+|  133  |        chi         |        \chi         |        <img src='./output/svg/chi.svg' height='32'  width='32'>         |
+|  134  |        circ        |        \circ        |        <img src='./output/svg/circ.svg' height='32'  width='32'>        |
+|  135  |      clubsuit      |      \clubsuit      |      <img src='./output/svg/clubsuit.svg' height='32'  width='32'>      |
+|  136  |        cong        |        \cong        |        <img src='./output/svg/cong.svg' height='32'  width='32'>        |
+|  137  |       coprod       |       \coprod       |       <img src='./output/svg/coprod.svg' height='32'  width='32'>       |
+|  138  |     copyright      |     \copyright      |     <img src='./output/svg/copyright.svg' height='32'  width='32'>      |
+|  139  |        cup         |        \cup         |        <img src='./output/svg/cup.svg' height='32'  width='32'>         |
+|  140  |       dagger       |       \dagger       |       <img src='./output/svg/dagger.svg' height='32'  width='32'>       |
+|  141  |       dashv        |       \dashv        |       <img src='./output/svg/dashv.svg' height='32'  width='32'>        |
+|  142  |      ddagger       |      \ddagger       |      <img src='./output/svg/ddagger.svg' height='32'  width='32'>       |
+|  143  |        ddot        |       \ddot{}       |        <img src='./output/svg/ddot.svg' height='32'  width='32'>        |
+|  144  |       ddots        |       \ddots        |       <img src='./output/svg/ddots.svg' height='32'  width='32'>        |
+|  145  |       delta        |       \delta        |       <img src='./output/svg/delta.svg' height='32'  width='32'>        |
+|  146  |      diamond       |      \diamond       |      <img src='./output/svg/diamond.svg' height='32'  width='32'>       |
+|  147  |    diamondsuit     |    \diamondsuit     |    <img src='./output/svg/diamondsuit.svg' height='32'  width='32'>     |
+|  148  |        div         |        \div         |        <img src='./output/svg/div.svg' height='32'  width='32'>         |
+|  149  |        dot         |       \dot{}        |        <img src='./output/svg/dot.svg' height='32'  width='32'>         |
+|  150  |       doteq        |       \doteq        |       <img src='./output/svg/doteq.svg' height='32'  width='32'>        |
+|  151  |        dots        |        \dots        |        <img src='./output/svg/dots.svg' height='32'  width='32'>        |
+|  152  |     downarrow      |     \downarrow      |     <img src='./output/svg/downarrow.svg' height='32'  width='32'>      |
+|  153  |        ell         |        \ell         |        <img src='./output/svg/ell.svg' height='32'  width='32'>         |
+|  154  |      emptyset      |      \emptyset      |      <img src='./output/svg/emptyset.svg' height='32'  width='32'>      |
+|  155  |      epsilon       |      \epsilon       |      <img src='./output/svg/epsilon.svg' height='32'  width='32'>       |
+|  156  |       equiv        |       \equiv        |       <img src='./output/svg/equiv.svg' height='32'  width='32'>        |
+|  157  |        eta         |        \eta         |        <img src='./output/svg/eta.svg' height='32'  width='32'>         |
+|  158  |       exists       |       \exists       |       <img src='./output/svg/exists.svg' height='32'  width='32'>       |
+|  159  |        flat        |        \flat        |        <img src='./output/svg/flat.svg' height='32'  width='32'>        |
+|  160  |       forall       |       \forall       |       <img src='./output/svg/forall.svg' height='32'  width='32'>       |
+|  161  |       frown        |       \frown        |       <img src='./output/svg/frown.svg' height='32'  width='32'>        |
+|  162  |       gamma        |       \gamma        |       <img src='./output/svg/gamma.svg' height='32'  width='32'>        |
+|  163  |         ge         |         \ge         |         <img src='./output/svg/ge.svg' height='32'  width='32'>         |
+|  164  |        gets        |        \gets        |        <img src='./output/svg/gets.svg' height='32'  width='32'>        |
+|  165  |         gg         |         \gg         |         <img src='./output/svg/gg.svg' height='32'  width='32'>         |
+|  166  |        gneq        |        \gneq        |        <img src='./output/svg/gneq.svg' height='32'  width='32'>        |
+|  167  |       gneqq        |       \gneqq        |       <img src='./output/svg/gneqq.svg' height='32'  width='32'>        |
+|  168  |       grave        |      \grave{}       |       <img src='./output/svg/grave.svg' height='32'  width='32'>        |
+|  169  |        hat         |       \hat{}        |        <img src='./output/svg/hat.svg' height='32'  width='32'>         |
+|  170  |        hbar        |        \hbar        |        <img src='./output/svg/hbar.svg' height='32'  width='32'>        |
+|  171  |     heartsuit      |     \heartsuit      |     <img src='./output/svg/heartsuit.svg' height='32'  width='32'>      |
+|  172  |   hookleftarrow    |   \hookleftarrow    |   <img src='./output/svg/hookleftarrow.svg' height='32'  width='32'>    |
+|  173  |   hookrightarrow   |   \hookrightarrow   |   <img src='./output/svg/hookrightarrow.svg' height='32'  width='32'>   |
+|  174  |       imath        |       \imath        |       <img src='./output/svg/imath.svg' height='32'  width='32'>        |
+|  175  |      implies       |      \implies       |      <img src='./output/svg/implies.svg' height='32'  width='32'>       |
+|  176  |         in         |         \in         |         <img src='./output/svg/in.svg' height='32'  width='32'>         |
+|  177  |       infty        |       \infty        |       <img src='./output/svg/infty.svg' height='32'  width='32'>        |
+|  178  |        int         |        \int         |        <img src='./output/svg/int.svg' height='32'  width='32'>         |
+|  179  |        iota        |        \iota        |        <img src='./output/svg/iota.svg' height='32'  width='32'>        |
+|  180  |       jmath        |       \jmath        |       <img src='./output/svg/jmath.svg' height='32'  width='32'>        |
+|  181  |       kappa        |       \kappa        |       <img src='./output/svg/kappa.svg' height='32'  width='32'>        |
+|  182  |       lambda       |       \lambda       |       <img src='./output/svg/lambda.svg' height='32'  width='32'>       |
+|  183  |       langle       |       \langle       |       <img src='./output/svg/langle.svg' height='32'  width='32'>       |
+|  184  |       lceil        |       \lceil        |       <img src='./output/svg/lceil.svg' height='32'  width='32'>        |
+|  185  |         le         |         \le         |         <img src='./output/svg/le.svg' height='32'  width='32'>         |
+|  186  |      leadsto       |      \leadsto       |      <img src='./output/svg/leadsto.svg' height='32'  width='32'>       |
+|  187  |     leftarrow      |     \leftarrow      |     <img src='./output/svg/leftarrow.svg' height='32'  width='32'>      |
+|  188  |  leftharpoondown   |  \leftharpoondown   |  <img src='./output/svg/leftharpoondown.svg' height='32'  width='32'>   |
+|  189  |   leftharpoonup    |   \leftharpoonup    |   <img src='./output/svg/leftharpoonup.svg' height='32'  width='32'>    |
+|  190  |   leftrightarrow   |   \leftrightarrow   |   <img src='./output/svg/leftrightarrow.svg' height='32'  width='32'>   |
+|  191  |       lfloor       |       \lfloor       |       <img src='./output/svg/lfloor.svg' height='32'  width='32'>       |
+|  192  |        lhd         |        \lhd         |        <img src='./output/svg/lhd.svg' height='32'  width='32'>         |
+|  193  |         ll         |         \ll         |         <img src='./output/svg/ll.svg' height='32'  width='32'>         |
+|  194  |        lneq        |        \lneq        |        <img src='./output/svg/lneq.svg' height='32'  width='32'>        |
+|  195  |       lneqq        |       \lneqq        |       <img src='./output/svg/lneqq.svg' height='32'  width='32'>        |
+|  196  |       lnsim        |       \lnsim        |       <img src='./output/svg/lnsim.svg' height='32'  width='32'>        |
+|  197  |   longleftarrow    |   \longleftarrow    |   <img src='./output/svg/longleftarrow.svg' height='32'  width='32'>    |
+|  198  | longleftrightarrow | \longleftrightarrow | <img src='./output/svg/longleftrightarrow.svg' height='32'  width='32'> |
+|  199  |     longmapsto     |     \longmapsto     |     <img src='./output/svg/longmapsto.svg' height='32'  width='32'>     |
+|  200  |   longrightarrow   |   \longrightarrow   |   <img src='./output/svg/longrightarrow.svg' height='32'  width='32'>   |
+|  201  |       mapsto       |       \mapsto       |       <img src='./output/svg/mapsto.svg' height='32'  width='32'>       |
+|  202  |       mathbb       |      \mathbb{}      |       <img src='./output/svg/mathbb.svg' height='32'  width='32'>       |
+|  203  |      mathring      |     \mathring{}     |      <img src='./output/svg/mathring.svg' height='32'  width='32'>      |
+|  204  |        mho         |        \mho         |        <img src='./output/svg/mho.svg' height='32'  width='32'>         |
+|  205  |        mid         |        \mid         |        <img src='./output/svg/mid.svg' height='32'  width='32'>         |
+|  206  |       models       |       \models       |       <img src='./output/svg/models.svg' height='32'  width='32'>       |
+|  207  |         mp         |         \mp         |         <img src='./output/svg/mp.svg' height='32'  width='32'>         |
+|  208  |         mu         |         \mu         |         <img src='./output/svg/mu.svg' height='32'  width='32'>         |
+|  209  |       nabla        |       \nabla        |       <img src='./output/svg/nabla.svg' height='32'  width='32'>        |
+|  210  |      natural       |      \natural       |      <img src='./output/svg/natural.svg' height='32'  width='32'>       |
+|  211  |       ncong        |       \ncong        |       <img src='./output/svg/ncong.svg' height='32'  width='32'>        |
+|  212  |      nearrow       |      \nearrow       |      <img src='./output/svg/nearrow.svg' height='32'  width='32'>       |
+|  213  |        neg         |        \neg         |        <img src='./output/svg/neg.svg' height='32'  width='32'>         |
+|  214  |        neq         |        \neq         |        <img src='./output/svg/neq.svg' height='32'  width='32'>         |
+|  215  |        ngeq        |        \ngeq        |        <img src='./output/svg/ngeq.svg' height='32'  width='32'>        |
+|  216  |        ngtr        |        \ngtr        |        <img src='./output/svg/ngtr.svg' height='32'  width='32'>        |
+|  217  |         ni         |         \ni         |         <img src='./output/svg/ni.svg' height='32'  width='32'>         |
+|  218  |        nleq        |        \nleq        |        <img src='./output/svg/nleq.svg' height='32'  width='32'>        |
+|  219  |       nless        |       \nless        |       <img src='./output/svg/nless.svg' height='32'  width='32'>        |
+|  220  |        nmid        |        \nmid        |        <img src='./output/svg/nmid.svg' height='32'  width='32'>        |
+|  221  |        not<        |        \not<        |        <img src='./output/svg/not<.svg' height='32'  width='32'>        |
+|  222  |        not>        |        \not>        |        <img src='./output/svg/not>.svg' height='32'  width='32'>        |
+|  223  |     notapprox      |     \not\approx     |     <img src='./output/svg/notapprox.svg' height='32'  width='32'>      |
+|  224  |      notcong       |      \not\cong      |      <img src='./output/svg/notcong.svg' height='32'  width='32'>       |
+|  225  |      notequiv      |     \not\equiv      |      <img src='./output/svg/notequiv.svg' height='32'  width='32'>      |
+|  226  |       notge        |       \not\ge       |       <img src='./output/svg/notge.svg' height='32'  width='32'>        |
+|  227  |       notle        |       \not\le       |       <img src='./output/svg/notle.svg' height='32'  width='32'>        |
+|  228  |    notparallel     |    \not\parallel    |    <img src='./output/svg/notparallel.svg' height='32'  width='32'>     |
+|  229  |       notsim       |      \not\sim       |       <img src='./output/svg/notsim.svg' height='32'  width='32'>       |
+|  230  |     nparallel      |     \nparallel      |     <img src='./output/svg/nparallel.svg' height='32'  width='32'>      |
+|  231  |        nsim        |        \nsim        |        <img src='./output/svg/nsim.svg' height='32'  width='32'>        |
+|  232  |         nu         |         \nu         |         <img src='./output/svg/nu.svg' height='32'  width='32'>         |
+|  233  |      nwarrow       |      \nwarrow       |      <img src='./output/svg/nwarrow.svg' height='32'  width='32'>       |
+|  234  |        odot        |        \odot        |        <img src='./output/svg/odot.svg' height='32'  width='32'>        |
+|  235  |        oint        |        \oint        |        <img src='./output/svg/oint.svg' height='32'  width='32'>        |
+|  236  |       omega        |       \omega        |       <img src='./output/svg/omega.svg' height='32'  width='32'>        |
+|  237  |       ominus       |       \ominus       |       <img src='./output/svg/ominus.svg' height='32'  width='32'>       |
+|  238  |       oplus        |       \oplus        |       <img src='./output/svg/oplus.svg' height='32'  width='32'>        |
+|  239  |       oslash       |       \oslash       |       <img src='./output/svg/oslash.svg' height='32'  width='32'>       |
+|  240  |       otimes       |       \otimes       |       <img src='./output/svg/otimes.svg' height='32'  width='32'>       |
+|  241  |   overleftarrow    |  \overleftarrow{}   |   <img src='./output/svg/overleftarrow.svg' height='32'  width='32'>    |
+|  242  |   overrightarrow   |  \overrightarrow{}  |   <img src='./output/svg/overrightarrow.svg' height='32'  width='32'>   |
+|  243  |      parallel      |      \parallel      |      <img src='./output/svg/parallel.svg' height='32'  width='32'>      |
+|  244  |      partial       |      \partial       |      <img src='./output/svg/partial.svg' height='32'  width='32'>       |
+|  245  |        perp        |        \perp        |        <img src='./output/svg/perp.svg' height='32'  width='32'>        |
+|  246  |        phi         |        \phi         |        <img src='./output/svg/phi.svg' height='32'  width='32'>         |
+|  247  |         pi         |         \pi         |         <img src='./output/svg/pi.svg' height='32'  width='32'>         |
+|  248  |         pm         |         \pm         |         <img src='./output/svg/pm.svg' height='32'  width='32'>         |
+|  249  |       pounds       |       \pounds       |       <img src='./output/svg/pounds.svg' height='32'  width='32'>       |
+|  250  |        prec        |        \prec        |        <img src='./output/svg/prec.svg' height='32'  width='32'>        |
+|  251  |       preceq       |       \preceq       |       <img src='./output/svg/preceq.svg' height='32'  width='32'>       |
+|  252  |       prime        |       \prime        |       <img src='./output/svg/prime.svg' height='32'  width='32'>        |
+|  253  |        prod        |        \prod        |        <img src='./output/svg/prod.svg' height='32'  width='32'>        |
+|  254  |       propto       |       \propto       |       <img src='./output/svg/propto.svg' height='32'  width='32'>       |
+|  255  |        psi         |        \psi         |        <img src='./output/svg/psi.svg' height='32'  width='32'>         |
+|  256  |       rangle       |       \rangle       |       <img src='./output/svg/rangle.svg' height='32'  width='32'>       |
+|  257  |       rceil        |       \rceil        |       <img src='./output/svg/rceil.svg' height='32'  width='32'>        |
+|  258  |       rfloor       |       \rfloor       |       <img src='./output/svg/rfloor.svg' height='32'  width='32'>       |
+|  259  |        rhd         |        \rhd         |        <img src='./output/svg/rhd.svg' height='32'  width='32'>         |
+|  260  |        rho         |        \rho         |        <img src='./output/svg/rho.svg' height='32'  width='32'>         |
+|  261  |     rightarrow     |     \rightarrow     |     <img src='./output/svg/rightarrow.svg' height='32'  width='32'>     |
+|  262  |  rightharpoondown  |  \rightharpoondown  |  <img src='./output/svg/rightharpoondown.svg' height='32'  width='32'>  |
+|  263  |   rightharpoonup   |   \rightharpoonup   |   <img src='./output/svg/rightharpoonup.svg' height='32'  width='32'>   |
+|  264  | rightleftharpoons  | \rightleftharpoons  | <img src='./output/svg/rightleftharpoons.svg' height='32'  width='32'>  |
+|  265  |      searrow       |      \searrow       |      <img src='./output/svg/searrow.svg' height='32'  width='32'>       |
+|  266  |      setminus      |      \setminus      |      <img src='./output/svg/setminus.svg' height='32'  width='32'>      |
+|  267  |       sharp        |       \sharp        |       <img src='./output/svg/sharp.svg' height='32'  width='32'>        |
+|  268  |       sigma        |       \sigma        |       <img src='./output/svg/sigma.svg' height='32'  width='32'>        |
+|  269  |        sim         |        \sim         |        <img src='./output/svg/sim.svg' height='32'  width='32'>         |
+|  270  |       simeq        |       \simeq        |       <img src='./output/svg/simeq.svg' height='32'  width='32'>        |
+|  271  |       smile        |       \smile        |       <img src='./output/svg/smile.svg' height='32'  width='32'>        |
+|  272  |       smiley       |       \smiley       |       <img src='./output/svg/smiley.svg' height='32'  width='32'>       |
+|  273  |     spadesuit      |     \spadesuit      |     <img src='./output/svg/spadesuit.svg' height='32'  width='32'>      |
+|  274  |       sqcap        |       \sqcap        |       <img src='./output/svg/sqcap.svg' height='32'  width='32'>        |
+|  275  |       sqcup        |       \sqcup        |       <img src='./output/svg/sqcup.svg' height='32'  width='32'>        |
+|  276  |        sqrt        |       \sqrt{}       |        <img src='./output/svg/sqrt.svg' height='32'  width='32'>        |
+|  277  |      sqsubset      |      \sqsubset      |      <img src='./output/svg/sqsubset.svg' height='32'  width='32'>      |
+|  278  |     sqsubseteq     |     \sqsubseteq     |     <img src='./output/svg/sqsubseteq.svg' height='32'  width='32'>     |
+|  279  |      sqsupset      |      \sqsupset      |      <img src='./output/svg/sqsupset.svg' height='32'  width='32'>      |
+|  280  |     sqsupseteq     |     \sqsupseteq     |     <img src='./output/svg/sqsupseteq.svg' height='32'  width='32'>     |
+|  281  |       square       |       \square       |       <img src='./output/svg/square.svg' height='32'  width='32'>       |
+|  282  |        star        |        \star        |        <img src='./output/svg/star.svg' height='32'  width='32'>        |
+|  283  |       subset       |       \subset       |       <img src='./output/svg/subset.svg' height='32'  width='32'>       |
+|  284  |      subseteq      |      \subseteq      |      <img src='./output/svg/subseteq.svg' height='32'  width='32'>      |
+|  285  |        succ        |        \succ        |        <img src='./output/svg/succ.svg' height='32'  width='32'>        |
+|  286  |       succeq       |       \succeq       |       <img src='./output/svg/succeq.svg' height='32'  width='32'>       |
+|  287  |        sum         |        \sum         |        <img src='./output/svg/sum.svg' height='32'  width='32'>         |
+|  288  |       supset       |       \supset       |       <img src='./output/svg/supset.svg' height='32'  width='32'>       |
+|  289  |      supseteq      |      \supseteq      |      <img src='./output/svg/supseteq.svg' height='32'  width='32'>      |
+|  290  |        surd        |        \surd        |        <img src='./output/svg/surd.svg' height='32'  width='32'>        |
+|  291  |      swarrow       |      \swarrow       |      <img src='./output/svg/swarrow.svg' height='32'  width='32'>       |
+|  292  |        tau         |        \tau         |        <img src='./output/svg/tau.svg' height='32'  width='32'>         |
+|  293  |     textdollar     |     \textdollar     |     <img src='./output/svg/textdollar.svg' height='32'  width='32'>     |
+|  294  |       theta        |       \theta        |       <img src='./output/svg/theta.svg' height='32'  width='32'>        |
+|  295  |       tilde        |      \tilde{}       |       <img src='./output/svg/tilde.svg' height='32'  width='32'>        |
+|  296  |       times        |       \times        |       <img src='./output/svg/times.svg' height='32'  width='32'>        |
+|  297  |         to         |         \to         |         <img src='./output/svg/to.svg' height='32'  width='32'>         |
+|  298  |        top         |        \top         |        <img src='./output/svg/top.svg' height='32'  width='32'>         |
+|  299  |      triangle      |      \triangle      |      <img src='./output/svg/triangle.svg' height='32'  width='32'>      |
+|  300  |    triangledown    |    \triangledown    |    <img src='./output/svg/triangledown.svg' height='32'  width='32'>    |
+|  301  |    triangleleft    |    \triangleleft    |    <img src='./output/svg/triangleleft.svg' height='32'  width='32'>    |
+|  302  |   triangleright    |   \triangleright    |   <img src='./output/svg/triangleright.svg' height='32'  width='32'>    |
+|  303  |       unlhd        |       \unlhd        |       <img src='./output/svg/unlhd.svg' height='32'  width='32'>        |
+|  304  |       unrhd        |       \unrhd        |       <img src='./output/svg/unrhd.svg' height='32'  width='32'>        |
+|  305  |      uparrow       |      \uparrow       |      <img src='./output/svg/uparrow.svg' height='32'  width='32'>       |
+|  306  |    updownarrow     |    \updownarrow     |    <img src='./output/svg/updownarrow.svg' height='32'  width='32'>     |
+|  307  |       uplus        |       \uplus        |       <img src='./output/svg/uplus.svg' height='32'  width='32'>        |
+|  308  |      upsilon       |      \upsilon       |      <img src='./output/svg/upsilon.svg' height='32'  width='32'>       |
+|  309  |       vDash        |       \vDash        |       <img src='./output/svg/vDash.svg' height='32'  width='32'>        |
+|  310  |     varepsilon     |     \varepsilon     |     <img src='./output/svg/varepsilon.svg' height='32'  width='32'>     |
+|  311  |       varphi       |       \varphi       |       <img src='./output/svg/varphi.svg' height='32'  width='32'>       |
+|  312  |       varpi        |       \varpi        |       <img src='./output/svg/varpi.svg' height='32'  width='32'>        |
+|  313  |       varrho       |       \varrho       |       <img src='./output/svg/varrho.svg' height='32'  width='32'>       |
+|  314  |      varsigma      |      \varsigma      |      <img src='./output/svg/varsigma.svg' height='32'  width='32'>      |
+|  315  |      vartheta      |      \vartheta      |      <img src='./output/svg/vartheta.svg' height='32'  width='32'>      |
+|  316  |       vdash        |       \vdash        |       <img src='./output/svg/vdash.svg' height='32'  width='32'>        |
+|  317  |       vdots        |       \vdots        |       <img src='./output/svg/vdots.svg' height='32'  width='32'>        |
+|  318  |        vec         |       \vec{}        |        <img src='./output/svg/vec.svg' height='32'  width='32'>         |
+|  319  |        vee         |        \vee         |        <img src='./output/svg/vee.svg' height='32'  width='32'>         |
+|  320  |       wedge        |       \wedge        |       <img src='./output/svg/wedge.svg' height='32'  width='32'>        |
+|  321  |      widehat       |     \widehat{}      |      <img src='./output/svg/widehat.svg' height='32'  width='32'>       |
+|  322  |     widetilde      |    \widetilde{}     |     <img src='./output/svg/widetilde.svg' height='32'  width='32'>      |
+|  323  |         wp         |         \wp         |         <img src='./output/svg/wp.svg' height='32'  width='32'>         |
+|  324  |         wr         |         \wr         |         <img src='./output/svg/wr.svg' height='32'  width='32'>         |
+|  325  |         xi         |         \xi         |         <img src='./output/svg/xi.svg' height='32'  width='32'>         |
+|  326  |        zeta        |        \zeta        |        <img src='./output/svg/zeta.svg' height='32'  width='32'>        |
+|  327  |         {          |         \{          |         <img src='./output/svg/{.svg' height='32'  width='32'>          |
+|  328  |        {AA}        |        {\AA}        |        <img src='./output/svg/{AA}.svg' height='32'  width='32'>        |
+|  329  |        {AE}        |        {\AE}        |        <img src='./output/svg/{AE}.svg' height='32'  width='32'>        |
+|  330  |        {L}         |        {\L}         |        <img src='./output/svg/{L}.svg' height='32'  width='32'>         |
+|  331  |        {OE}        |        {\OE}        |        <img src='./output/svg/{OE}.svg' height='32'  width='32'>        |
+|  332  |        {O}         |        {\O}         |        <img src='./output/svg/{O}.svg' height='32'  width='32'>         |
+|  333  |        {SS}        |        {\SS}        |        <img src='./output/svg/{SS}.svg' height='32'  width='32'>        |
+|  334  |        {ae}        |        {\ae}        |        <img src='./output/svg/{ae}.svg' height='32'  width='32'>        |
+|  335  |        {l}         |        {\l}         |        <img src='./output/svg/{l}.svg' height='32'  width='32'>         |
+|  336  |        {oe}        |        {\oe}        |        <img src='./output/svg/{oe}.svg' height='32'  width='32'>        |
+|  337  |        {o}         |        {\o}         |        <img src='./output/svg/{o}.svg' height='32'  width='32'>         |
+|  338  |        {ss}        |        {\ss}        |        <img src='./output/svg/{ss}.svg' height='32'  width='32'>        |
+|  339  |         }          |         \}          |         <img src='./output/svg/}.svg' height='32'  width='32'>          |
